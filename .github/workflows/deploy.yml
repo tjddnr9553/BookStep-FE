@@ -10,18 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug secrets
+      - name: Debug AUTO_ACTIONS
         run: |
-          echo "Token length: ${#GITHUB_TOKEN}"
+          echo "AUTO_ACTIONS Token length: ${#AUTO_ACTIONS}"
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTO_ACTIONS }}
+          AUTO_ACTIONS: ${{ secrets.AUTO_ACTIONS }}
 
       - name: Checkout main
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.AUTO_ACTIONS }}
+          token: ${#AUTO_ACTIONS}
           fetch-depth: 0
           ref: main
+        env:
+          AUTO_ACTIONS: ${{ secrets.AUTO_ACTIONS }}
 
       - name: Add remote-url
         run: |
