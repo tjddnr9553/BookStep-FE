@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug secrets
+        run:
+          echo "Token length: ${{ secrets.AUTO_ACTIONS }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTO_ACTIONS }}
+
       - name: Checkout main
         uses: actions/checkout@v4
         with:
