@@ -11,8 +11,8 @@ jobs:
 
     steps:
       - name: Debug secrets
-        run:
-          echo "Token length: ${{ secrets.AUTO_ACTIONS }}"
+        run: |
+          echo "Token length: ${#GITHUB_TOKEN}"
         env:
           GITHUB_TOKEN: ${{ secrets.AUTO_ACTIONS }}
 
