@@ -1,0 +1,57 @@
+.sidebarContainer {
+    position: fixed;
+    width: 122px;
+    height: 928px;
+    top: 122px;
+    left: 15px;
+    bottom: 30px;
+
+    background: #FFFFFF;
+    border-radius: 33px;
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: #F6F6F8;
+
+    &:nth-child(1) {
+        top: 30px;
+        border: 1px solid #959FAC;
+    }
+
+    &:nth-child(2) {
+        top: 300px;
+    }
+
+    &:nth-child(3) {
+        top: 400px;
+    }
+
+    &:nth-child(4) {
+        top: 500px;
+    }
+
+    &:nth-child(5) {
+        top: 600px;
+    }
+
+    &:nth-child(6) {
+        top: 828px;
+        border: 1px solid #959FAC;
+    }
+}
