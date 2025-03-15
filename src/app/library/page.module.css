@@ -1,0 +1,139 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.searchTools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.categoryButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.filterTools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.bookItem {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.bookImage {
+    width: 220px;
+    height: 333px;
+
+    box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+}
+
+.bookInfo {
+    width: 220px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.bookTitle {
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #111111;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookAuthor {
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #4D4D4D;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 220px;
+    margin-bottom: 22px;
+
+    box-sizing: border-box;
+}
+
+.bookProgress,
+.bookProgressPage {
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #EF5C7C;
+}
+
+.bookProgress {
+    width: 26px;
+    text-align: left;
+}
+
+.bookProgressPage {
+    width: 80px;
+    text-align: right;
+}

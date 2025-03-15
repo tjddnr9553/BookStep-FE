@@ -1,0 +1,18 @@
+.functionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 56px;
+    padding: 18px;
+
+    border-radius: 12px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    gap: 18px;
+}
