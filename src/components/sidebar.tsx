@@ -29,9 +29,9 @@ export default function Sidebar() {
           <Image src="/svgs/group.svg" alt={'Group'} width={24} height={24} />
         </Link>
       </div>
-      <div className={styles.iconButton}>
+      <Link href={'/login'} className={styles.iconButton}>
         <Image src="/svgs/logout.svg" alt={'Logout'} width={24} height={24} />
-      </div>
+      </Link>
     </div>
   )
 }

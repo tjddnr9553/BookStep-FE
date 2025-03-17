@@ -3,7 +3,7 @@ const config = {
     '@tailwindcss/postcss': {},
     'postcss-px-to-viewport': {
       viewportWidth: 1920, // 디자인 기준 화면 너비
-      unitPrecision: 2, // 변환 소수점 자리수
+      unitPrecision: 5, // 변환 소수점 자리수
       propList: ['*'], // 모든 속성 적용
       viewportUnit: 'vw', // px을 변환할 단위
       fontViewportUnit: 'rem', // 글꼴 단위
