@@ -12,7 +12,7 @@ export default function FunctionButton(props: FunctionButtonProps) {
               color: color,
               border: borderColor ? `1px solid ${borderColor}` : 'none',
             }}>
-      <Image src={`./svgs/${svgUrl}.svg`} alt={'Function Button'} width={12} height={12} /> {content}
+      <Image src={`/svgs/${svgUrl}.svg`} alt={'Function Button'} width={12} height={12} /> {content}
     </button>
   )
 }
