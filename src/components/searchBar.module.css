@@ -25,4 +25,5 @@
 .searchInput {
     flex: 1;
     padding-left: 15px;
+    border: none;
 }

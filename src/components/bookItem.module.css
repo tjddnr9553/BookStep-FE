@@ -1,57 +1,15 @@
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.searchTools {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-}
-
-.toolbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.categoryButtons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-}
-
-.filterTools {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-}
-
 .bookItem {
     display: flex;
     flex-direction: column;
     width: 220px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
-    gap: 30px;
-    justify-content: space-between;
+.bookItem:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: 0.5s;
 }
 
 .bookImage {
@@ -136,4 +94,8 @@
 .bookProgressPage {
     width: 80px;
     text-align: right;
+}
+
+.bookProgressPage span {
+    color: #8F8F8F;
 }
