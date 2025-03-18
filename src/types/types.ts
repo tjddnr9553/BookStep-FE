@@ -3,18 +3,21 @@ export interface BookData {
   author: string;
   progress: number;
   description: string;
-  svgUrl: string;
+  cover: string;
+  publisher: string;
+  pubDate: string;
 }
 
 export interface BasicButtonProps {
   content: string;
   isActive: boolean;
+  onClick: () => void;
 }
 
 export interface FunctionButtonProps {
   content?: string,
-  onClickFn?: () => void,
-  svgUrl: string,
+  onClick?: () => void,
+  cover?: string,
   bgColor: string
   color: string
   borderColor?: string

@@ -1,7 +1,15 @@
-import type {NextConfig} from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-    /* config options here */
-};
+  // 외부 이미지 출처 허가
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.aladin.co.kr',
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
