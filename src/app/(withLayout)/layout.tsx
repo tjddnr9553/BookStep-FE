@@ -1,9 +1,10 @@
-import './globals.css'
+import '../globals.css'
 import Sidebar from '@/components/sidebar'
 import Header from '@/components/header'
 import styles from '@/app/(withLayout)/layout.module.css'
 import FloatAddMemo from '@/components/floatAddMemo'
 import FloatMemo from '@/components/floatMemo'
+import ToggleSidebar from '@/components/toggleSidebar'
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <div className={styles.layoutContainer}>
       <FloatMemo />
       <FloatAddMemo />
+      <ToggleSidebar />
       <div className={styles.sidebarWrapper}>
         <Sidebar />
       </div>
