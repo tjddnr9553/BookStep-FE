@@ -8,6 +8,13 @@ export interface BookData {
   pubDate: string;
 }
 
+export interface MemoData {
+  $id: number,
+  body: string,
+  colors: string,
+  position: string,
+}
+
 export interface BasicButtonProps {
   content: string;
   isActive: boolean;
