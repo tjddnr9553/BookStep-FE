@@ -8,7 +8,7 @@
 
     position: fixed;
     width: 122px;
-    min-height: calc(100vh - 152px);
+    height: calc(100vh - 152px);
     top: 122px;
     left: 15px;
 
@@ -21,6 +21,9 @@
       flex-direction: column;
       align-items: center;
       gap: 35px;
+
+      min-width: 62px;
+      min-height: 62px;
     }
 
     .icon, .backIcon, .logoutIcon {
@@ -29,8 +32,8 @@
       justify-content: center;
       box-sizing: border-box;
 
-      width: 62px;
-      height: 62px;
+      min-width: 62px;
+      min-height: 62px;
       border-radius: 18px;
       background: #F6F6F8;
     }
