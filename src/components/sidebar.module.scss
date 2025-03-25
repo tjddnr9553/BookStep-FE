@@ -1,0 +1,39 @@
+.sidebar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 196.25px;
+
+    position: fixed;
+    width: 122px;
+    min-height: calc(100vh - 152px);
+    top: 122px;
+    left: 15px;
+
+    background: #FFFFFF;
+    border-radius: 33px;
+    padding: 30px 0;
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .icon, .backIcon, .logoutIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: #F6F6F8;
+    }
+  }
+}
+
