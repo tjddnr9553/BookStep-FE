@@ -22,8 +22,32 @@
     color: #959FAC;
 }
 
+.searchBar:focus-within {
+    border: 1px solid #EF5C7C;
+    padding-left: 10px;
+}
+
+.placeholder {
+    position: absolute;
+    top: -8px;
+    padding: 0 6px;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 12px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #EF5C7C;
+}
+
 .searchInput {
     flex: 1;
     padding-left: 15px;
+    height: 100%;
     border: none;
+    outline: none;
 }

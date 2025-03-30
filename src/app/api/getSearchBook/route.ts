@@ -11,10 +11,11 @@ export async function GET(req: NextRequest) {
     }
 
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_ALADIN_URL}${process.env.NEXT_PUBLIC_API_ALADIN_KEY}&Query=${query}&MaxResults=100`,
+      `${process.env.NEXT_PUBLIC_API_SERVER_URL}/api/v1/books-search?keyword=${query}&format=js&maxResults=100`,
     )
+    const books = response.data
 
-    return NextResponse.json(response.data)
+    return NextResponse.json(books.data)
   } catch (error) {
     return NextResponse.json({ message: 'Failed to fetch data', error }, { status: 500 })
   }

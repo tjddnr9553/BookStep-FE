@@ -80,7 +80,7 @@
 .searchBookResultContainer {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+
     gap: 28px;
     padding-right: 20px;
 
@@ -89,6 +89,10 @@
     height: 664px;
     left: 47px;
     top: 203px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
 }
 
 .searchBookItem {
