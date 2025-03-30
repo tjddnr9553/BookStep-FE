@@ -1,15 +1,21 @@
+'use client'
+
 import styles from '@/components/searchBar.module.css'
 import Image from 'next/image'
-import { ChangeEvent } from 'react'
+import { ChangeEvent, useState } from 'react'
 
-export default function SearchBar({ placeholder, onChange }: {
+export default function SearchBar({ placeholder, action }: {
   placeholder: string,
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  action: (e: ChangeEvent<HTMLInputElement>) => void
 }) {
+  const [isFocused, setIsFocused] = useState<boolean>(false)
+
   return (
     <div className={styles.searchBar}>
-      <Image src={'/svgs/search.svg'} alt={'Search'} width={22} height={22} />
-      <input type="search" placeholder={placeholder} className={styles.searchInput} onChange={onChange} />
+      {isFocused ? null : <Image src={'/svgs/search.svg'} alt={'Search'} width={22} height={22} />}
+      {isFocused && <label className={styles.placeholder}>{placeholder}</label>}
+      <input type="search" placeholder={placeholder} className={styles.searchInput} onChange={action}
+             onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
     </div>
   )
 }
