@@ -1,12 +1,14 @@
 export interface BookData {
-  'isbn13': string;
-  'title': string;
-  'description': string;
-  'author': string;
-  'cover': string;
-  'publisher': string;
-  'pubDate': string;
-  'itemPage': string;
+  isbn13: string;
+  title: string;
+  description: string;
+  author: string;
+  cover: string;
+  publisher: string;
+  pubDate: string;
+  itemPage: string;
+  progress: number;
+  rating: number;
 }
 
 export interface MemoData {
@@ -19,7 +21,7 @@ export interface MemoData {
 export interface BasicButtonProps {
   content: string;
   isActive: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface FunctionButtonProps {
