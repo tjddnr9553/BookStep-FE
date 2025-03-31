@@ -1,0 +1,16 @@
+.basicButton {
+    width: auto;
+    min-width: 128px;
+    height: 56px;
+
+    border-radius: 47px;
+    padding: 16px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    cursor: pointer;
+}

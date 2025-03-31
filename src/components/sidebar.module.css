@@ -1,7 +1,7 @@
 .sidebarContainer {
     position: fixed;
     width: 122px;
-    height: 928px;
+    height: calc(100vh - 152px);
     top: 122px;
     left: 15px;
     bottom: 30px;
@@ -10,8 +10,6 @@
     border-radius: 33px;
     display: flex;
     flex-direction: column;
-
-    transition: transform 0.3s ease-in-out;
 }
 
 .iconButton {
@@ -35,23 +33,23 @@
     }
 
     &:nth-child(2) {
-        top: 300px;
+        top: calc(30%);
     }
 
     &:nth-child(3) {
-        top: 400px;
+        top: calc(42%);
     }
 
     &:nth-child(4) {
-        top: 500px;
+        top: calc(54%);
     }
 
     &:nth-child(5) {
-        top: 600px;
+        top: calc(66%);
     }
 
     &:nth-child(6) {
-        top: 828px;
+        top: calc(100% - 92px);
         border: 1px solid #959FAC;
     }
 }

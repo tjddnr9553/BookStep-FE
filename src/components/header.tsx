@@ -8,25 +8,25 @@ export default function Header() {
       <div className={styles.headerLogo}>Logo</div>
       <div className={styles.iconButton}>
         <Link href={'/'}>
-          <Image src="./svgs/search.svg" alt={'Search'} width={22.5} height={22.5} />
+          <Image src="/svgs/search.svg" alt={'Search'} width={22.5} height={22.5} />
         </Link>
       </div>
       <div className={styles.iconButton}>
         <Link href={'/'}>
-          <Image src="./svgs/notification.svg" alt={'Notification'} width={22.5} height={22.5} />
+          <Image src="/svgs/notification.svg" alt={'Notification'} width={18} height={22} />
         </Link>
       </div>
       <hr className={styles.divider} />
       <div className={styles.iconButton}>
         <Link href={'/'}>
-          <Image src="./svgs/avatar.svg" alt={'Avatar'} width={22.5} height={22.5} />
+          <Image src="/svgs/avatar.svg" alt={'Avatar'} width={22.5} height={22.5} />
         </Link>
       </div>
       <div className={styles.userName}>
         Sarah
       </div>
       <div className={styles.userDropdownButton}>
-        <Image src="./svgs/arrow_down.svg" alt={'Dropdown'} width={22.5} height={22.5} />
+        <Image src="/svgs/dropdown.svg" alt={'Dropdown'} width={22.5} height={22.5} />
       </div>
     </div>
   )
