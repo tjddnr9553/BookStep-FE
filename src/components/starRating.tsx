@@ -1,30 +1,18 @@
-import Image from 'next/image'
 import styles from '@/components/startRating.module.css'
+import { ColorStar, NonColorStar } from '@/components/icons/customIcons'
 
-export default function StarRating({ rating }: { rating: number }) {
+
+export default function StarRating({ size, color, rating }: { size: number, color: string, rating: number }) {
   const colorStars = Math.min(Math.max(0, rating), 3)
   const nonColorStars = 3 - colorStars
 
   return (
-    <div className={styles.grade}>
+    <div className={color !== '#B6B6B6' ? styles.customContainer : styles.container}>
       {[...Array(colorStars)].map((_, index) => (
-        <Image
-          key={`colored-${index}`}
-          src={'/svgs/colorStar.svg'}
-          alt={'Colored Star'}
-          width={15}
-          height={15}
-        />
+        <ColorStar key={index} width={size} height={size} color={'#EF5C7C'} />
       ))}
-
       {[...Array(nonColorStars)].map((_, index) => (
-        <Image
-          key={`non-colored-${index}`}
-          src={'/svgs/nonColorStar.svg'}
-          alt={'Non-Colored Star'}
-          width={15}
-          height={15}
-        />
+        <NonColorStar key={index} width={size} height={size} color={color} />
       ))}
     </div>
   )
