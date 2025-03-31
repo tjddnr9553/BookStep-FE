@@ -8,23 +8,20 @@ import BasicButton from '@/components/basicButton'
 import { DatePicker } from '@/components/datePicker'
 import { useState } from 'react'
 import AddBookModal from '@/components/searchModal/addBookModal'
-import { BookData } from '@/types/types'
-import { debounce } from 'lodash'
-import { GetSearchBook } from '@/hooks/useQuery'
 
 export default function ContentHeader() {
   const [isActiveCategory, setIsActiveCategory] = useState<boolean[]>([true, false, false])
   const [isAddBook, setIsAddBook] = useState<boolean>(false)
-  const [keyword, setKeyword] = useState('')
-  const [searchResult, setSearchResult] = useState<BookData[] | null>(null)
+  // const [keyword, setKeyword] = useState('')
+  // const [searchResult, setSearchResult] = useState<BookData[] | null>(null)
   const categories = ['전체보기', '소장함 보기', '폴더 보기']
 
   // DB에서 책 조회 로직으로 수정
-  const { data, isLoading, error } = GetSearchBook(keyword)
+  // const { data, isLoading, error } = GetSearchBook(keyword)
 
-  const debouncedSearch = debounce((value: string) => {
-    setKeyword(value)
-  }, 300)
+  // const debouncedSearch = debounce((value: string) => {
+  //   setKeyword(value)
+  // }, 300)
 
   return (
     <>
@@ -32,7 +29,7 @@ export default function ContentHeader() {
       <div className={styles.header}>
         <PageTitle title={'My Library'} />
         <div className={styles.searchTools}>
-          <SearchBar placeholder={'Search Your Book'} action={(e) => debouncedSearch(e.target.value)} />
+          <SearchBar placeholder={'Search Your Book'} action={(e) => console.log(e.target.value)} />
           <FunctionButton cover={'add'} bgColor={'#262932'} content={'추가하기'} color={'#FFFFFF'}
                           onClick={() => setIsAddBook(true)} />
           <FunctionButton cover={'settings'} bgColor={'#FFFFFF'} color={'#000000'} borderColor={'#63697E'} />
