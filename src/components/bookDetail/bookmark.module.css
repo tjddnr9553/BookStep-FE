@@ -1,0 +1,92 @@
+.container {
+    box-sizing: border-box;
+
+    width: 388px;
+    min-height: 600px;
+
+    background: #F6F6F8;
+    border: 1px solid #D3D3DF;
+    border-radius: 28px;
+    margin-bottom: 44px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: auto;
+    height: 24px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #262932;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.colorDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.contentCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: 22px;
+    height: 22px;
+
+    background: #FEFEFE;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #CCCCCC;
+}
+
+.utilityTools {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    cursor: pointer;
+}
+
+.divider {
+    margin: 21px 0;
+    border: 1px solid #D2D2D2;
+}
+
+.bookmarkItemWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
