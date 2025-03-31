@@ -1,18 +1,20 @@
 export interface BookData {
+  isbn13: string;
   title: string;
-  author: string;
-  progress: number;
   description: string;
+  author: string;
   cover: string;
   publisher: string;
   pubDate: string;
+  itemPage: string;
+  progress: number;
 }
 
 export interface MemoData {
-  $id: number,
-  body: string,
-  colors: string,
-  position: string,
+  $id: number;
+  body: string;
+  colors: string;
+  position: string;
 }
 
 export interface BasicButtonProps {
@@ -22,10 +24,10 @@ export interface BasicButtonProps {
 }
 
 export interface FunctionButtonProps {
-  content?: string,
-  onClick?: () => void,
-  cover?: string,
-  bgColor: string
-  color: string
-  borderColor?: string
+  content?: string;
+  onClick?: () => void;
+  cover?: string;
+  bgColor: string;
+  color: string;
+  borderColor?: string;
 }
