@@ -1,0 +1,86 @@
+$primary-color: #FFFFFF;
+$secondary-color: #D2D2D2;
+$font-family: 'Pretendard', serif;
+$number-font-family: 'SUIT', serif;
+
+.header {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    position: fixed;
+    width: 100%;
+    height: 96px;
+    box-sizing: border-box;
+
+    background: $primary-color;
+    border: 1px solid $secondary-color;
+
+    z-index: 99;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 138px;
+    height: 46px;
+    margin-left: 45px;
+
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+    background-color: #D9D9D9;
+
+    margin-right: auto;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    width: auto;
+    height: 60px;
+    margin-right: 71px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 60px;
+      height: 60px;
+
+      background-color: #F6F6F8;
+      border-radius: 50%;
+    }
+
+    .divider {
+      height: 30px;
+      border: 1px solid $secondary-color;
+    }
+
+    .userName {
+      font-family: $font-family;
+      font-weight: 600;
+      color: #535353;
+
+      margin-right: 8px;
+    }
+
+    .userDropdownButton {
+      width: 13px;
+      height: 6.5px;
+    }
+  }
+}
