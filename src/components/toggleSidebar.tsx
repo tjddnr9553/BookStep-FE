@@ -7,7 +7,7 @@ import BookShelf from '@/components/bookShelf'
 import { Books } from '@/mock'
 import { useState, useRef, useCallback } from 'react'
 import { throttle } from 'lodash'
-import { More, Right } from '@/components/icons/customIcons'
+import { Right } from '@/components/icons/customIcons'
 
 const mockData = ['전체보기', '3월에 읽고 싶은 책', '봄에 읽고 싶은 책', '꼭 읽어야 하는 책']
 
