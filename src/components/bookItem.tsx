@@ -15,18 +15,22 @@ export default function BookItem({ rating }: { rating: number }) {
     <>
       {Books.map((book: BookData, i: number) => (
         <div key={i} className={styles.bookItem} onClick={() => router.push(`/book/${book.isbn13}`)}>
-          <StarRating size={18} rating={rating} color={'#B6B6B6'} />
-          <Image src={book.cover} alt={book.title} width={220} height={330} className={styles.bookImage} />
-          <div className={styles.bookInfo}>
-            <div className={styles.bookHeader}>
-              <div className={styles.bookTitle}>{book.title}</div>
-              <div className={styles.bookAuthor}>{book.author}</div>
+          <div className={styles.coverWrapper}>
+            <Image src={book.cover} alt={book.title} width={220} height={330} className={styles.bookImage} />
+            <StarRating size={18} rating={rating} color={'#B6B6B6'} />
+          </div>
+          <div className={styles.bookInfoWrapper}>
+            <div className={styles.bookInfo}>
+              <div className={styles.bookHeader}>
+                <div className={styles.bookTitle}>{book.title}</div>
+                <div className={styles.bookAuthor}>{book.author}</div>
+              </div>
+              <div className={styles.bookBody}>
+                <div className={styles.bookProgress}>{book.progress}%</div>
+                <div className={styles.bookProgressPage}>105<span>/276</span></div>
+              </div>
+              <ProgressBar propProgress={book.progress} />
             </div>
-            <div className={styles.bookBody}>
-              <div className={styles.bookProgress}>{book.progress}%</div>
-              <div className={styles.bookProgressPage}>105<span>/276</span></div>
-            </div>
-            <ProgressBar propProgress={book.progress} />
           </div>
         </div>
       ))}
