@@ -42,6 +42,15 @@ export function Notification({ width, height, color }: { width: number, height: 
   )
 }
 
+export function Left({ width, height, color }: { width: number, height: number, color: string }) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.42871 1.00049L1.13582 8.29338C0.745293 8.68391 0.745293 9.31707 1.13582 9.7076L8.42871 17.0005"
+            stroke={color} strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function Right({ width, height, color }: { width: number, height: number, color: string }) {
   return (
     <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">

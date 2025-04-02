@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BookData } from '@/types/types'
 import styles from '@/components/bookShelf.module.css'
 import Image from 'next/image'
+import { Left, Right } from '@/components/icons/customIcons'
 
 export default function BookShelf({ books, isGridView }: { books: BookData[], isGridView: boolean }) {
   const bookWidthVW = 9.18281
@@ -42,7 +43,7 @@ export default function BookShelf({ books, isGridView }: { books: BookData[], is
           <div>
             {currentBookIndex > 0 && (
               <button className={styles.arrowLeft} onClick={() => handleScroll('left')}>
-                <Image src={'/svgs/left.svg'} alt={'Left'} width={8} height={16} />
+                <Left width={1.5} height={1.5} color={'#111111'} />
               </button>
             )}
             <div className={styles.bookScrollContainer}>
@@ -59,7 +60,7 @@ export default function BookShelf({ books, isGridView }: { books: BookData[], is
             </div>
             {currentBookIndex < halfIndex && (
               <button className={styles.arrowRight} onClick={() => handleScroll('right')}>
-                <Image src={'/svgs/right.svg'} alt={'Left'} width={8} height={16} />
+                <Right width={1.5} height={1.5} color={'#111111'} />
               </button>
             )}
           </div>
