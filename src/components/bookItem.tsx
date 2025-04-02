@@ -17,7 +17,7 @@ export default function BookItem({ rating }: { rating: number }) {
         <div key={i} className={styles.bookItem} onClick={() => router.push(`/book/${book.isbn13}`)}>
           <div className={styles.coverWrapper}>
             <Image src={book.cover} alt={book.title} width={220} height={330} className={styles.bookImage} />
-            <StarRating size={18} rating={rating} color={'#B6B6B6'} />
+            <StarRating size={1.25} rating={rating} color={'#B6B6B6'} />
           </div>
           <div className={styles.bookInfoWrapper}>
             <div className={styles.bookInfo}>

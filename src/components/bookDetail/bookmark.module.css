@@ -34,8 +34,8 @@
     font-family: 'Pretendard', serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.04vw;
+    line-height: 1.25vw;
     color: #262932;
 
     flex: none;
@@ -65,8 +65,8 @@
     font-family: 'Pretendard', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.73vw;
+    line-height: 0.89vw;
 
     color: #CCCCCC;
 }

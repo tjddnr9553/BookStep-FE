@@ -1,13 +1,13 @@
 import styles from '@/components/bookDetail/floatCard.module.css'
 import BasicButton from '@/components/basicButton'
-import Image from 'next/image'
+import { More } from '@/components/icons/customIcons'
 
 export default function FloatCard({ content }: { content: string }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.category}>{content}</div>
-        <Image src={'/svgs/more.svg'} alt={'More Button'} width={4} height={22} className={styles.moreButton} />
+        <More width={1.04} height={1.04} color={'#D9D9D9'} />
       </div>
       <div className={styles.content}>{content}</div>
       <div className={styles.answerButton}>

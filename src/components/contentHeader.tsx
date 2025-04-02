@@ -30,7 +30,7 @@ export default function ContentHeader() {
         <PageTitle title={'My Library'} />
         <div className={styles.searchTools}>
           <SearchBar placeholder={'Search Your Book'} action={(e) => console.log(e.target.value)} />
-          <FunctionButton cover={'add'} bgColor={'#262932'} content={'추가하기'} color={'#FFFFFF'}
+          <FunctionButton cover={'plus'} bgColor={'#262932'} content={'추가하기'} color={'#FFFFFF'}
                           onClick={() => setIsAddBook(true)} />
           <FunctionButton cover={'settings'} bgColor={'#FFFFFF'} color={'#000000'} borderColor={'#63697E'} />
         </div>

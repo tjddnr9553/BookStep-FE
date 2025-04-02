@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/app/(withoutLayout)/login/page.module.scss'
+import { UncheckedRadioButton, VisibilityOff } from '@/components/icons/customIcons'
 
 export default function Page() {
   return (
@@ -15,12 +16,12 @@ export default function Page() {
         </div>
         <div className={styles.passwordWrapper}>
           <input type="password" placeholder="비밀번호" className={styles.input} />
-          <Image src="/svgs/visibilityOff.svg" alt="비밀번호 보기" width={23.5} height={16.45} />
+          <VisibilityOff width={0.89} height={0.89} />
         </div>
       </div>
       <div className={styles.options}>
         <div className={styles.autoLogin}>
-          <Image src="/svgs/uncheckedRadioButton.svg" alt="자동 로그인 체크" width={18} height={18} />
+          <UncheckedRadioButton width={0.73} height={0.73} />
           자동 로그인
         </div>
         <Link href="/forgetPassword" className={styles.link}>비밀번호 찾기</Link>

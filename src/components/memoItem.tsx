@@ -2,10 +2,10 @@
 
 import { MemoData } from '@/types/types'
 import styles from '@/components/memoItem.module.css'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { autoGrow, setNewOffset, setZIndex } from '@/utils/util'
 import useMemoStore from '@/stores/useMemoStore'
+import { Plus, Trash } from '@/components/icons/customIcons'
 
 export default function MemoItem({ memo }: { memo: MemoData }) {
   const { addMemo, updateMemoPosition, updateMemoBody, removeMemo } = useMemoStore()
@@ -79,8 +79,8 @@ export default function MemoItem({ memo }: { memo: MemoData }) {
     <div className={styles.memo} style={{ backgroundColor: colors.colorBody, left: position.x, top: position.y }}
          ref={memoRef} onMouseDown={mouseDown}>
       <div className={styles.memoHeader} style={{ backgroundColor: colors.colorHeader }}>
-        <Image src={'/svgs/trash.svg'} alt={'Delete'} width={24} height={24} onClick={handleRemoveMemo} />
-        <Image src={'/svgs/plus.svg'} alt={'Plus'} width={24} height={24} onClick={handleAddMemo} />
+        <Trash width={2} height={2} onClick={handleRemoveMemo} />
+        <Plus width={2} height={2} onClick={handleAddMemo} />
       </div>
       <div className={styles.memoContent}>
         <textarea className={styles.memoTextarea} style={{ color: colors.colorText }} value={body}
