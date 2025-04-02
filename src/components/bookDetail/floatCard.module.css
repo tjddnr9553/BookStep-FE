@@ -22,14 +22,10 @@
     font-family: 'Pretendard', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.04vw;
+    line-height: 1.25vw;
 
     color: #FEFEFE;
-}
-
-.moreButton {
-    cursor: pointer;
 }
 
 .content {
@@ -39,8 +35,8 @@
     font-family: 'Pretendard', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.25vw;
+    line-height: 1.51vw;
 
     color: #FEFEFE;
 }

@@ -45,7 +45,7 @@ export default function BookDetailPage() {
                 <span style={{ marginLeft: '10px' }}>{bookData.progress}%</span>
               </div>
               <div className={styles.bookDetail__rating}>
-                <StarRating size={18} rating={2} color={'#F6F6F8'} />
+                <StarRating size={1.5} rating={2} color={'#F6F6F8'} />
               </div>
             </div>
           </div>

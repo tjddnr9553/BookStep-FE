@@ -110,8 +110,8 @@
         height: 19px;
         font-family: 'Pretendard', serif;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 0.83vw;
+        line-height: 0.99vw;
         color: #262932;
         gap: 5px;
     }
@@ -141,8 +141,8 @@
     &__title {
         font-family: 'Pretendard', serif;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 43px;
+        font-size: 1.88vw;
+        line-height: 2.24vw;
         margin-bottom: 16px;
         color: #FFFFFF;
     }
@@ -153,8 +153,8 @@
         margin-bottom: 58px;
         font-family: 'Pretendard', serif;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 0.73vw;
+        line-height: 0.89vw;
         color: #FFFFFF;
     }
 
@@ -164,8 +164,8 @@
         width: 288px;
         font-family: 'Pretendard', serif;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 0.73vw;
+        line-height: 0.89vw;
         color: #F6F6F8;
     }
 
@@ -184,7 +184,7 @@
     &__button {
         padding: 10px 25px;
         border-radius: 25px;
-        font-size: 16px;
+        font-size: 0.83vw;
         cursor: pointer;
     }
 }

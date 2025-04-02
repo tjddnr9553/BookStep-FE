@@ -1,7 +1,7 @@
 import styles from '@/components/bookDetail/bookmark.module.css'
 import Image from 'next/image'
 import BookmarkItem from '@/components/bookDetail/bookmarkItem'
-import { Right } from '@/components/icons/customIcons'
+import { Plus, Right } from '@/components/icons/customIcons'
 
 export default function Bookmark({ category, index }: { category: string, index: number }) {
   const colors = ['#FF295F', '#F6A329', '#3DAA34', '#357BEC']
@@ -16,8 +16,8 @@ export default function Bookmark({ category, index }: { category: string, index:
             <div className={styles.contentCount}>4</div>
           </div>
           <div className={styles.utilityTools}>
-            <Image src={'/svgs/plus.svg'} alt={'Add Bookmark'} width={16} height={16} />
-            <Right width={5} height={10} color={'#505050'} />
+            <Plus width={1.04} height={1.04} />
+            <Right width={0.73} height={0.73} color={'#505050'} />
           </div>
         </div>
         <div className={styles.divider}></div>
