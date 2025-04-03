@@ -1,16 +1,19 @@
 'use client'
 
-import styles from '@/app/(withoutLayout)/book/page.module.scss'
-import { Books } from '@/mock'
-import { useParams } from 'next/navigation'
-import { ProgressBar } from '@/components/progressBar'
-import StarRating from '@/components/starRating'
+import styles from '@/app/(withoutLayout)/book/[...isbn13]/page.module.scss'
+
 import Image from 'next/image'
-import BasicButton from '@/components/basicButton'
+import { useState } from 'react'
+import { useParams } from 'next/navigation'
+
+import { Books } from '@/mock'
+
 import Bookmark from '@/components/bookDetail/bookmark'
 import FloatCard from '@/components/bookDetail/floatCard'
-import { useState } from 'react'
 
+import { ProgressBar } from '@/components/common/progressBar'
+import StarRating from '@/components/common/starRating'
+import BasicButton from '@/components/common/basicButton'
 
 export default function BookDetailPage() {
   const params = useParams()
@@ -18,8 +21,11 @@ export default function BookDetailPage() {
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0)
   const cardWidthVW = 22.29167
 
+  // url에서 고유한 책 아이디인 isbn13을 추출함
   const { isbn13 } = params
   if (!isbn13) return
+
+  // mock 데이터에서 찾음
   const bookData = Books.find((book) => book.isbn13 === isbn13[0])
   if (!bookData) return
 
