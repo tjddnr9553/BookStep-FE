@@ -4,10 +4,10 @@ import QueryProvider from '@/utils/queryProvider'
 
 import Sidebar from '@/components/layout/sidebar'
 import Header from '@/components/layout/header'
-import ToggleSidebar from '@/components/toggleSidebar'
+import ToggleSidebar from '@/components/toggleSidebar/toggleSidebar'
 
-import FloatMemo from '@/components/floatMemo'
-import FloatAddMemo from '@/components/floatAddMemo'
+import FloatMemo from '@/components/memo/floatMemo'
+import FloatAddMemo from '@/components/memo/floatAddMemo'
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

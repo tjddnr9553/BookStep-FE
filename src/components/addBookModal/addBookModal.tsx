@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { debounce } from 'lodash'
-import SearchBar from '@/components/searchBar'
-import FunctionButton from '@/components/functionButton'
-import SearchBookResult from '@/components/searchModal/searchBookResult'
-import styles from '@/components/searchModal/addBookModal.module.css'
+import SearchBar from '@/components/common/searchBar'
+import FunctionButton from '@/components/common/functionButton'
+import SearchBookResult from '@/components/addBookModal/searchBookResult'
+import styles from '@/components/addBookModal/addBookModal.module.css'
 import { BookData } from '@/types/types'
 import { GetSearchBook } from '@/hooks/useQuery'
 

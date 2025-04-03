@@ -1,5 +1,5 @@
 import styles from '@/components/bookDetail/floatCard.module.css'
-import BasicButton from '@/components/basicButton'
+import BasicButton from '@/components/common/basicButton'
 import { More } from '@/components/icons/customIcons'
 
 export default function FloatCard({ content }: { content: string }) {

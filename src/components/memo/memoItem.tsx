@@ -1,7 +1,7 @@
 'use client'
 
 import { MemoData } from '@/types/types'
-import styles from '@/components/memoItem.module.css'
+import styles from '@/components/memo/memoItem.module.css'
 import { useEffect, useRef } from 'react'
 import { autoGrow, setNewOffset, setZIndex } from '@/utils/util'
 import useMemoStore from '@/stores/useMemoStore'

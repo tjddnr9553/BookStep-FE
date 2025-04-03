@@ -1,9 +1,9 @@
 'use client'
 
-import styles from '@/components/toggleSidebar.module.css'
+import styles from '@/components/toggleSidebar/toggleSidebar.module.css'
 import Image from 'next/image'
-import FunctionButton from '@/components/functionButton'
-import BookShelf from '@/components/bookShelf'
+import FunctionButton from '@/components/common/functionButton'
+import BookShelf from '@/components/toggleSidebar/bookShelf'
 import { Books } from '@/mock'
 import { useState, useRef, useCallback } from 'react'
 import { throttle } from 'lodash'

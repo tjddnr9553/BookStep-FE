@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BookData } from '@/types/types'
-import styles from '@/components/bookShelf.module.css'
+import styles from '@/components/toggleSidebar/bookShelf.module.css'
 import Image from 'next/image'
 import { Left, Right } from '@/components/icons/customIcons'
 

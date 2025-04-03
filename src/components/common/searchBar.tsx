@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/components/searchBar.module.css'
+import styles from '@/components/common/searchBar.module.css'
 import { ChangeEvent, useState } from 'react'
 import { Search } from '@/components/icons/customIcons'
 

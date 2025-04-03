@@ -1,4 +1,4 @@
-import styles from '@/components/basicButton.module.css'
+import styles from '@/components/common/basicButton.module.css'
 import { BasicButtonProps } from '@/types/types'
 
 export default function BasicButton(props: BasicButtonProps) {
