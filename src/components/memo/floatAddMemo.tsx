@@ -1,7 +1,7 @@
 'use client'
 
 import useMemoStore from '@/stores/useMemoStore'
-import styles from '@/components/floatAddMemo.module.css'
+import styles from '@/components/memo/floatAddMemo.module.css'
 
 export default function FloatAddMemo() {
   const { isOpen, setIsOpen, memos, addMemo } = useMemoStore()

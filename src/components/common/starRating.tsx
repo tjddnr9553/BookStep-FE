@@ -1,4 +1,4 @@
-import styles from '@/components/startRating.module.css'
+import styles from '@/components/common/startRating.module.css'
 import { ColorStar, NonColorStar } from '@/components/icons/customIcons'
 
 

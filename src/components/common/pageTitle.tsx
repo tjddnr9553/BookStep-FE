@@ -1,4 +1,4 @@
-import styles from '@/components/pageTitle.module.css'
+import styles from '@/components/common/pageTitle.module.css'
 
 export default function PageTitle({ title }: { title: string }) {
   return (

@@ -1,18 +1,19 @@
 'use client'
 
-import styles from '@/components/toggleSidebar.module.css'
+import styles from '@/components/toggleSidebar/toggleSidebar.module.css'
 import Image from 'next/image'
-import FunctionButton from '@/components/functionButton'
-import BookShelf from '@/components/bookShelf'
+import FunctionButton from '@/components/common/functionButton'
+import BookShelf from '@/components/toggleSidebar/bookShelf'
 import { Books } from '@/mock'
 import { useState, useRef, useCallback } from 'react'
 import { throttle } from 'lodash'
+import { Right } from '@/components/icons/customIcons'
 
 const mockData = ['전체보기', '3월에 읽고 싶은 책', '봄에 읽고 싶은 책', '꼭 읽어야 하는 책']
 
 export default function ToggleSidebar() {
   const [toggleOpen, setToggleOpen] = useState<boolean>(false)
-  const [sidebarWidth, setSidebarWidth] = useState<number>(833)
+  const [sidebarWidth, setSidebarWidth] = useState<number>(800)
   const [isGridView, setIsGridView] = useState<boolean>(false)
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null)
   const [activeCategory, setActiveCategory] = useState<number>(0)
@@ -27,7 +28,7 @@ export default function ToggleSidebar() {
 
       requestAnimationFrame(() => {
         const newWidth = window.innerWidth - e.clientX
-        if (newWidth >= 833 && newWidth <= 1200) {
+        if (newWidth >= 800 && newWidth <= 1200) {
           setSidebarWidth(newWidth)
         }
       })
@@ -101,7 +102,7 @@ export default function ToggleSidebar() {
                   <div className={styles.contentCategory}>{item}</div>
                   <div className={styles.moreButton} onClick={() => handleMoreButton(i)}>
                     {selectedCategory === i ? '돌아가기' : '더보기'}
-                    <Image src={'/svgs/moreButton.svg'} alt={'More Button'} width={10} height={10} />
+                    <Right width={0.5} height={0.5} color={'#767676'} />
                   </div>
                 </div>
                 <BookShelf books={Books} isGridView={isGridView} />

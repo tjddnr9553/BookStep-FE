@@ -1,5 +1,4 @@
 import styles from '@/components/bookDetail/bookmark.module.css'
-import Image from 'next/image'
 import BookmarkItem from '@/components/bookDetail/bookmarkItem'
 import { Plus, Right } from '@/components/icons/customIcons'
 

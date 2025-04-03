@@ -1,15 +1,16 @@
-import styles from '@/components/functionButton.module.css'
+import styles from '@/components/common/functionButton.module.css'
 import { FunctionButtonProps } from '@/types/types'
-import { Plus, Settings, Sort } from '@/components/icons/customIcons'
+import { Plus, Settings, Sort, Filter } from '@/components/icons/customIcons'
 
 const menuItems = [
   { name: 'plus', Icon: Plus },
   { name: 'sort', Icon: Sort },
   { name: 'settings', Icon: Settings },
+  { name: 'filter', Icon: Filter },
 ]
 
 export default function FunctionButton(props: FunctionButtonProps) {
-  const { content, onClick, cover, bgColor, color, borderColor } = props
+  const { content, onClick, cover, bgColor, color, borderColor, circle } = props
   const matchedItem = menuItems.find(item => item.name === cover)
 
   return (
@@ -20,6 +21,8 @@ export default function FunctionButton(props: FunctionButtonProps) {
         backgroundColor: bgColor,
         color: color,
         border: borderColor ? `1px solid ${borderColor}` : 'none',
+        borderRadius: circle ? '50%' : '12px',
+        padding: content ? '0 18px' : '0',
       }}
     >
       {matchedItem && <matchedItem.Icon width={1.25} height={1.25} color={color} />} {content}

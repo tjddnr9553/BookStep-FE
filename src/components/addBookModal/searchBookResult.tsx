@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/components/searchModal/addBookModal.module.css'
+import styles from '@/components/addBookModal/addBookModal.module.css'
 import Image from 'next/image'
 import { format } from 'date-fns'
 import { BookData } from '@/types/types'

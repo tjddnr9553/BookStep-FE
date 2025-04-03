@@ -1,0 +1,63 @@
+.sidebar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 196.25px;
+
+    position: fixed;
+    width: 122px;
+    height: calc(100vh - 152px);
+    top: 122px;
+    left: 15px;
+
+    background: #FFFFFF;
+    border-radius: 33px;
+    padding: 30px 0;
+
+    z-index: 99;
+  }
+
+  &__menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    min-width: 62px;
+    min-height: 62px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    min-width: 62px;
+    min-height: 62px;
+    border-radius: 18px;
+    background: #F6F6F8;
+
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(#262932, 0.15);
+    }
+  }
+}
+
+.activeMenu {
+  background: #262932;
+
+  &:hover {
+    background: #262932;
+  }
+}
+
+.unactiveMenu {
+  background: #F6F6F8;
+}
+
+

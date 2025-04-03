@@ -1,6 +1,6 @@
 'use client'
 
-import MemoItem from '@/components/memoItem'
+import MemoItem from '@/components/memo/memoItem'
 import useMemoStore from '@/stores/useMemoStore'
 import { MemoData } from '@/types/types'
 
