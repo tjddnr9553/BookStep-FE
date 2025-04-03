@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import { Back, Group, Home, Library, Logout, Post } from '@/components/icons/customIcons'
+import { useRouter } from 'next/navigation'
 
 const menuItems = [
   { href: '/home', Icon: Home },
@@ -16,10 +17,11 @@ const menuItems = [
 
 export default function Sidebar() {
   const [isSelected, setIsSelected] = useState<boolean[]>(Array(menuItems.length).fill(false))
+  const router = useRouter()
 
   return (
     <div className={styles.sidebar__container}>
-      <div className={styles.sidebar__icon}>
+      <div className={styles.sidebar__icon} onClick={() => router.back()}>
         <Back width={1.5} height={1.5} color={'#262932'} />
       </div>
       <div className={styles.sidebar__menuItems}>
