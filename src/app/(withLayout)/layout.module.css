@@ -1,21 +1,21 @@
-.layoutContainer {
+.layout {
     display: flex;
     min-height: 100vh;
 }
 
-.sidebarWrapper {
+.sidebarContainer {
     position: sticky;
     top: 0;
 }
 
-.contentWrapper {
+.mainContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #F6F6F6;
 }
 
-.content {
+.mainContent {
     flex: 1;
     padding-top: 162px;
     padding-left: 200px;

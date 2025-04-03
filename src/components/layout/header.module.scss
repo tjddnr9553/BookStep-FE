@@ -1,0 +1,115 @@
+.header {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 96px;
+    left: 0;
+    top: 0;
+
+    z-index: 99;
+
+    &.default {
+      background: #FFFFFF;
+      border: 1px solid #D2D2D2;
+
+      .iconButton {
+        background: #F6F6F8;
+      }
+
+      .header__userName {
+        color: #535353;
+      }
+
+      .iconButton svg {
+        color: #262932;
+      }
+
+      .divider {
+        border: 0.5px solid #D2D2D2;
+      }
+    }
+
+    &.detailed {
+      background: none;
+      border: none;
+
+      .iconButton {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .header__userName, .iconButton svg {
+        color: #FFFFFF;
+      }
+
+      .divider {
+        border: 0.5px solid #FFFFFF;
+      }
+    }
+  }
+
+  &__logo {
+    width: 138px;
+    height: auto;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    background-size: cover;
+  }
+
+  &__iconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  &__divider {
+    border: 0.5px solid #D2D2D2;
+    height: 30px;
+  }
+
+  &__userName {
+    width: 54px;
+    height: 25px;
+    margin: 0 8px;
+
+    font-family: 'SUIT', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.04vw;
+    line-height: 1.3vw;
+
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    width: 20px;
+    height: 6.5px;
+
+    cursor: pointer;
+  }
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+}
