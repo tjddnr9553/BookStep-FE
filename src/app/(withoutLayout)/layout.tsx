@@ -1,7 +1,6 @@
-import '../globals.css'
 import styles from '@/app/(withoutLayout)/layout.module.css'
 
-export default function RootLayout({ children }: {
+export default function Layout({ children }: {
   children: React.ReactNode
 }) {
   return (

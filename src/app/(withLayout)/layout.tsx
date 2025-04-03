@@ -1,4 +1,3 @@
-import '../globals.css'
 import styles from '@/app/(withLayout)/layout.module.css'
 
 import QueryProvider from '@/utils/queryProvider'
