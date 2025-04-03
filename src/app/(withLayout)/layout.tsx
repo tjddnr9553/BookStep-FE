@@ -10,10 +10,8 @@ import ToggleSidebar from '@/components/toggleSidebar'
 import FloatMemo from '@/components/floatMemo'
 import FloatAddMemo from '@/components/floatAddMemo'
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-    <body>
     <QueryProvider>
       <div className={styles.layout}>
         <FloatMemo />
@@ -28,7 +26,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </div>
       </div>
     </QueryProvider>
-    </body>
-    </html>
   )
 }

@@ -39,6 +39,25 @@
     min-height: 62px;
     border-radius: 18px;
     background: #F6F6F8;
+
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(#262932, 0.15);
+    }
   }
 }
+
+.activeMenu {
+  background: #262932;
+
+  &:hover {
+    background: #262932;
+  }
+}
+
+.unactiveMenu {
+  background: #F6F6F8;
+}
+
 

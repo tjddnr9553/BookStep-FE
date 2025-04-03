@@ -1,6 +1,9 @@
+'use client'
+
 import styles from '@/components/layout/sidebar.module.scss'
 
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { Back, Group, Home, Library, Logout, Post } from '@/components/icons/customIcons'
 
@@ -12,6 +15,8 @@ const menuItems = [
 ]
 
 export default function Sidebar() {
+  const [isSelected, setIsSelected] = useState<boolean[]>(Array(menuItems.length).fill(false))
+
   return (
     <div className={styles.sidebar__container}>
       <div className={styles.sidebar__icon}>
@@ -19,9 +24,10 @@ export default function Sidebar() {
       </div>
       <div className={styles.sidebar__menuItems}>
         {menuItems.map(({ href, Icon }, index) => (
-          <div className={styles.sidebar__icon} key={index}>
+          <div className={`${styles.sidebar__icon} ${isSelected[index] ? styles.activeMenu : styles.unactiveMenu}`}
+               key={index} onClick={() => setIsSelected(isSelected.map((_, i) => i === index))}>
             <Link href={href}>
-              <Icon width={1.75} height={1.75} color="#8F8F8F" />
+              <Icon width={1.75} height={1.75} color={isSelected[index] ? '#FFFFFF' : '#8F8F8F'} />
             </Link>
           </div>
         ))}
