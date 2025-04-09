@@ -3,7 +3,7 @@
 import styles from '@/app/(withoutLayout)/book/[...isbn13]/page.module.scss'
 
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { throttle } from 'lodash'
 
@@ -17,39 +17,41 @@ import StarRating from '@/components/common/starRating'
 import BasicButton from '@/components/common/basicButton'
 
 export default function BookDetailPage() {
+  const cardWidthVW = 22.29167
   const params = useParams()
 
   const [scrollX, setScrollX] = useState<number>(0)
-  const [scrollView, setScrollView] = useState<number>(0)
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0)
   const [isOwn, setIsOwn] = useState<boolean>(false)
 
   const focusFirst = useRef<HTMLDivElement>(null)
   const focusSecond = useRef<HTMLDivElement>(null)
-  const cardWidthVW = 22.29167
+  const scrollViewRef = useRef<number>(0)
 
   const handleWheel = (e: WheelEvent) => {
     e.preventDefault()
 
+    // 마우스 휠 이동 값
     const { deltaY } = e
     if (!focusFirst.current || !focusSecond.current) return
 
     const focusSecondTop = focusSecond.current.getBoundingClientRect().top
 
-    console.log(scrollView)
-    // 아래로 스크롤 할 때
-    if (deltaY > 0 && scrollView !== 1) {
-      setScrollView(1)
+    // 아래로 휠 내릴 때
+    if (deltaY > 0 && scrollViewRef.current !== 1) {
+      scrollViewRef.current = 1
       focusSecond.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
 
-    // 위로 스크롤 할 때
-    else if (deltaY < 0 && scrollView !== 0 && focusSecondTop > 0) {
-      setScrollView(0)
+    // 위로 휠 올릴 때(하단 데이터 베이스 이상으로 휠 올릴 때)
+    } else if (deltaY < 0 && scrollViewRef.current !== 0 && focusSecondTop > 0) {
+      scrollViewRef.current = 0
       focusFirst.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
-  const throttleWheelEvent = throttle(handleWheel, 500)
+
+  const throttleWheelEvent = useCallback(
+    throttle(handleWheel, 300)
+    , [])
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
