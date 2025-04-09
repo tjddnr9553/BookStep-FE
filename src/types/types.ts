@@ -9,6 +9,7 @@ export interface BookData {
   itemPage: string;
   progress: number;
   rating: number;
+  isOwn: boolean;
 }
 
 export interface MemoData {
@@ -22,6 +23,8 @@ export interface BasicButtonProps {
   content: string;
   isActive: boolean;
   onClick?: () => void;
+  icon?: string;
+  color:string;
 }
 
 export interface FunctionButtonProps {
