@@ -31,4 +31,5 @@ export interface FunctionButtonProps {
   bgColor: string;
   color: string;
   borderColor?: string;
+  circle?: boolean;
 }

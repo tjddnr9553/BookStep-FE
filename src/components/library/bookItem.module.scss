@@ -1,0 +1,130 @@
+.bookItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:not(:hover) {
+    transform: scale(1);
+  }
+
+  &__coverContainer {
+    display: flex;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__cover {
+    width: 220px;
+    height: 333px;
+
+    box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+
+    margin-bottom: 26px;
+  }
+
+  &__infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    width: 292px;
+    height: 450px;
+    padding-top: 306px;
+    margin-top: 26px;
+
+    background-color: #FFFFFF;
+    border-radius: 14px;
+  }
+
+  &__info {
+    width: 220px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    &__title {
+      font-family: 'Pretendard', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.25vw;
+      line-height: 1.51vw;
+      color: #111111;
+
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__author {
+      font-family: 'Pretendard', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.83vw;
+      line-height: 0.99vw;
+
+      color: #4D4D4D;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      max-width: 220px;
+      margin-bottom: 22px;
+
+      box-sizing: border-box;
+    }
+
+    &__progress, &__page {
+      font-family: 'Pretendard', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.625vw;
+      line-height: 0.73vw;
+
+      color: #EF5C7C;
+    }
+
+    &__progress {
+      max-width: 26px;
+      text-align: left;
+    }
+
+    &__page {
+      width: 80px;
+      text-align: right;
+
+      span {
+        color: #8F8F8F;
+      }
+    }
+  }
+}
