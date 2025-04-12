@@ -1,13 +1,22 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding-left: 36px;
 }
 
 .content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 49px;
     justify-content: space-between;
     position: relative;
+}
+
+.gridFive {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 59.25px;
+    row-gap: 80px;
+}
+
+.gridSix {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 45px;
+    row-gap: 52px;
 }

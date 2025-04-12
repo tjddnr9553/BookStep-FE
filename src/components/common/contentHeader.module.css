@@ -36,3 +36,49 @@
     align-items: center;
     gap: 16px;
 }
+
+.sortDropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: auto;
+    left: 1659px;
+    top: 319px;
+    margin-top: 14px;
+
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-shadow: 4px 4px 14px rgba(17, 17, 17, 0.16);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.sortItems, .orders {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 23px;
+
+    font-family: 'Pretendard', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.73vw;
+    line-height: 0.89vw;
+
+    color: #111111;
+}
+
+.selectedDotWrapper {
+    width: 0.3vw;
+    height: 0.3vw;
+}
+
+/*.sortItems:hover, .orders:hover {*/
+/*    background: #F6F6F8;*/
+/*}*/

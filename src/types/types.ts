@@ -24,7 +24,8 @@ export interface BasicButtonProps {
   isActive: boolean;
   onClick?: () => void;
   icon?: string;
-  color:string;
+  color: string;
+  fontWeight?: number;
 }
 
 export interface FunctionButtonProps {
@@ -35,4 +36,5 @@ export interface FunctionButtonProps {
   color: string;
   borderColor?: string;
   circle?: boolean;
+  fontWeight?: number;
 }

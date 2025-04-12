@@ -10,7 +10,7 @@ const menuItems = [
 ]
 
 export default function FunctionButton(props: FunctionButtonProps) {
-  const { content, onClick, cover, bgColor, color, borderColor, circle } = props
+  const { content, onClick, cover, bgColor, color, borderColor, circle, fontWeight } = props
   const matchedItem = menuItems.find(item => item.name === cover)
 
   return (
@@ -18,6 +18,7 @@ export default function FunctionButton(props: FunctionButtonProps) {
       onClick={onClick}
       className={styles.functionButton}
       style={{
+        fontWeight: fontWeight,
         backgroundColor: bgColor,
         color: color,
         border: borderColor ? `1px solid ${borderColor}` : 'none',
