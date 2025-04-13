@@ -11,7 +11,7 @@ export default function FloatCard({ content }: { content: string }) {
       </div>
       <div className={styles.content}>{content}</div>
       <div className={styles.answerButton}>
-        <BasicButton content={'답변하기'} isActive={true} icon={'right'} color={'#FFFFFF'} />
+        <BasicButton content={'답변하기'} isActive={true} icon={'right'} color={'#FFFFFF'} fontWeight={500} />
       </div>
     </div>
   )

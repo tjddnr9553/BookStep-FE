@@ -22,7 +22,7 @@ export default function ToggleSidebar() {
   const contentRef = useRef<HTMLDivElement>(null)
   const isResizing = useRef<boolean>(false)
 
-  const resize = useCallback(
+  const resize = useCallback(() =>
     throttle((e: MouseEvent) => {
       if (!isResizing.current || !sidebarRef.current) return
 
@@ -32,8 +32,7 @@ export default function ToggleSidebar() {
           setSidebarWidth(newWidth)
         }
       })
-    }, 16),
-    [],
+    }, 16), []
   )
 
   function startResize(e: React.MouseEvent) {

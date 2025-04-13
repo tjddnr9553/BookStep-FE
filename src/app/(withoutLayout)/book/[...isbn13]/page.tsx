@@ -3,7 +3,7 @@
 import styles from '@/app/(withoutLayout)/book/[...isbn13]/page.module.scss'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { throttle } from 'lodash'
 
@@ -42,16 +42,17 @@ export default function BookDetailPage() {
       scrollViewRef.current = 1
       focusSecond.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
-    // 위로 휠 올릴 때(하단 데이터 베이스 이상으로 휠 올릴 때)
+      // 위로 휠 올릴 때(하단 데이터 베이스 이상으로 휠 올릴 때)
     } else if (deltaY < 0 && scrollViewRef.current !== 0 && focusSecondTop > 0) {
       scrollViewRef.current = 0
       focusFirst.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
-  const throttleWheelEvent = useCallback(
-    throttle(handleWheel, 300)
-    , [])
+  const throttleWheelEvent = useCallback(() =>
+      throttle(handleWheel, 300),
+    [],
+  )
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -155,8 +156,8 @@ export default function BookDetailPage() {
                    className={styles.bookDetail__noteIcon} />
           </div>
           <div className={styles.bookDetail__actions}>
-            <BasicButton content={'글쓰기'} isActive={true} color={'#FFFFFF'} />
-            <BasicButton content={'메모하기'} isActive={false} color={'#FFFFFF'} />
+            <BasicButton content={'글쓰기'} isActive={true} color={'#FFFFFF'} fontWeight={500} />
+            <BasicButton content={'메모하기'} isActive={false} color={'#FFFFFF'} fontWeight={500} />
           </div>
         </div>
         {focusFirstDatabase()}
