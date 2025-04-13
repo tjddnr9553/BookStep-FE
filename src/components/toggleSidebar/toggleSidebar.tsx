@@ -5,7 +5,7 @@ import Image from 'next/image'
 import FunctionButton from '@/components/common/functionButton'
 import BookShelf from '@/components/toggleSidebar/bookShelf'
 import { Books } from '@/mock'
-import { useState, useRef, useCallback, useMemo } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import { throttle } from 'lodash'
 import { Right } from '@/components/icons/customIcons'
 
