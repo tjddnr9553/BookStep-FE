@@ -3,7 +3,7 @@
 import styles from '@/app/(withoutLayout)/book/[...isbn13]/page.module.scss'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { throttle } from 'lodash'
 
@@ -49,8 +49,8 @@ export default function BookDetailPage() {
     }
   }
 
-  const throttleWheelEvent = useCallback(() =>
-      throttle(handleWheel, 300),
+  const throttleWheelEvent = useMemo(
+    () => throttle(handleWheel, 300),
     [],
   )
 

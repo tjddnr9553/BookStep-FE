@@ -5,7 +5,7 @@ import Image from 'next/image'
 import FunctionButton from '@/components/common/functionButton'
 import BookShelf from '@/components/toggleSidebar/bookShelf'
 import { Books } from '@/mock'
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useMemo } from 'react'
 import { throttle } from 'lodash'
 import { Right } from '@/components/icons/customIcons'
 
@@ -22,7 +22,7 @@ export default function ToggleSidebar() {
   const contentRef = useRef<HTMLDivElement>(null)
   const isResizing = useRef<boolean>(false)
 
-  const resize = useCallback(() =>
+  const resize = useMemo(() =>
     throttle((e: MouseEvent) => {
       if (!isResizing.current || !sidebarRef.current) return
 
@@ -32,7 +32,7 @@ export default function ToggleSidebar() {
           setSidebarWidth(newWidth)
         }
       })
-    }, 16), []
+    }, 16), [],
   )
 
   function startResize(e: React.MouseEvent) {
