@@ -15,6 +15,7 @@ import FloatCard from '@/components/bookDetail/floatCard'
 import { ProgressBar } from '@/components/common/progressBar'
 import StarRating from '@/components/common/starRating'
 import BasicButton from '@/components/common/basicButton'
+import Editor from '@/components/bookDetail/editor'
 
 export default function BookDetailPage() {
   const cardWidthVW = 22.29167
@@ -23,6 +24,8 @@ export default function BookDetailPage() {
   const [scrollX, setScrollX] = useState<number>(0)
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0)
   const [isOwn, setIsOwn] = useState<boolean>(false)
+  const [showEditor, setShowEditor] = useState<boolean>(false)
+  const [activeBookmark, setActiveBookmark] = useState<string>('')
 
   const focusFirst = useRef<HTMLDivElement>(null)
   const focusSecond = useRef<HTMLDivElement>(null)
@@ -45,6 +48,7 @@ export default function BookDetailPage() {
       // 위로 휠 올릴 때(하단 데이터 베이스 이상으로 휠 올릴 때)
     } else if (deltaY < 0 && scrollViewRef.current !== 0 && focusSecondTop > 0) {
       scrollViewRef.current = 0
+
       focusFirst.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
@@ -93,12 +97,23 @@ export default function BookDetailPage() {
     </>
   )
 
+  const handleAddBookmark = (category: string) => {
+    setShowEditor(!showEditor)
+    setActiveBookmark(category)
+
+    if (scrollViewRef.current !== 1 && focusSecond.current) {
+      scrollViewRef.current = 1
+      focusSecond.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   // 상단에 보여줄 첫 데이터베이스
   const focusFirstDatabase = () => (
     <>
       <div className={styles.bookDetail__content}>
         {['Archive', 'Action Plan', 'Quotes', 'Question'].map((category, idx) => (
-          <Bookmark key={`Bookmark - ${idx}`} category={category} index={idx} itemsLength={1} />
+          <Bookmark key={`Bookmark - ${idx}`} category={category} index={idx} itemsLength={1}
+                    onClick={() => handleAddBookmark(category)} />
         ))}
       </div>
     </>
@@ -109,66 +124,70 @@ export default function BookDetailPage() {
     <>
       <div className={styles.bookDetail__content}>
         {['Archive', 'Action Plan', 'Quotes', 'Question'].map((category, idx) => (
-          <Bookmark key={`Bookmark - ${idx}`} category={category} index={idx} />
+          <Bookmark key={`Bookmark - ${idx}`} category={category} index={idx}
+                    onClick={() => handleAddBookmark(category)} />
         ))}
       </div>
     </>
   )
 
   return (
-    <div className={styles.bookDetail} ref={focusFirst}>
-      <div className={styles.bookDetail__coverSection}>
-        <div className={styles.bookDetail__coverBackground} style={{ background: '#262932' }}>
-          <div className={styles.bookDetail__infoContainer}>
-            <div className={styles.bookDetail__infoWrapper}>
-              {renderBookMeta('', '', true)}
-              <div className={styles.bookDetail__progressContainer}>
-                <ProgressBar propProgress={bookData.progress} />
-                <span style={{ marginLeft: '10px' }}>{bookData.progress}%</span>
-              </div>
-              <div className={styles.bookDetail__rating}>
-                <StarRating size={1.5} rating={2} color={'#F6F6F8'} />
+    <>
+      {showEditor && <Editor onClose={() => setShowEditor(false)} category={activeBookmark} />}
+      <div className={styles.bookDetail} ref={focusFirst}>
+        <div className={styles.bookDetail__coverSection}>
+          <div className={styles.bookDetail__coverBackground} style={{ background: '#262932' }}>
+            <div className={styles.bookDetail__infoContainer}>
+              <div className={styles.bookDetail__infoWrapper}>
+                {renderBookMeta('', '', true)}
+                <div className={styles.bookDetail__progressContainer}>
+                  <ProgressBar propProgress={bookData.progress} />
+                  <span style={{ marginLeft: '10px' }}>{bookData.progress}%</span>
+                </div>
+                <div className={styles.bookDetail__rating}>
+                  <StarRating size={1.5} rating={2} color={'#F6F6F8'} />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles.bookDetail__coverImage} style={{ backgroundImage: `url(${bookData.cover})` }}></div>
-      <div className={styles.bookDetail__floatCardSection}>
-        <div className={styles.bookDetail__floatCard} style={{ transform: `translateX(${scrollX}vw)` }}>
-          {['오늘의 질문', '오늘의 명언', '오늘의 계획'].map((content, idx) => (
-            <FloatCard key={idx} content={content} />
-          ))}
-        </div>
-        <div className={styles.bookDetail__indicator}>
-          {new Array(3).fill(0).map((_, idx) => (
-            <div key={idx} className={styles.bookDetail__indicatorDot}
-                 style={{ backgroundColor: currentCardIndex === idx ? '#212121' : '#DBDBDB' }}
-                 onClick={() => handleCardScroll(idx)} />
-          ))}
-        </div>
-      </div>
-      <div className={styles.bookDetail__contentSection}>
-        <div className={styles.bookDetail__noteSection}>
-          <div className={styles.bookDetail__noteHeader}>한줄평 / 메모
-            <Image src={'/svgs/memo.svg'} alt={'Memo'} width={16} height={16}
-                   className={styles.bookDetail__noteIcon} />
+        <div className={styles.bookDetail__coverImage} style={{ backgroundImage: `url(${bookData.cover})` }}></div>
+        <div className={styles.bookDetail__floatCardSection}>
+          <div className={styles.bookDetail__floatCard} style={{ transform: `translateX(${scrollX}vw)` }}>
+            {['오늘의 질문', '오늘의 명언', '오늘의 계획'].map((content, idx) => (
+              <FloatCard key={idx} content={content} />
+            ))}
           </div>
-          <div className={styles.bookDetail__actions}>
-            <BasicButton content={'글쓰기'} isActive={true} color={'#FFFFFF'} fontWeight={500} />
-            <BasicButton content={'메모하기'} isActive={false} color={'#FFFFFF'} fontWeight={500} />
+          <div className={styles.bookDetail__indicator}>
+            {new Array(3).fill(0).map((_, idx) => (
+              <div key={idx} className={styles.bookDetail__indicatorDot}
+                   style={{ backgroundColor: currentCardIndex === idx ? '#212121' : '#DBDBDB' }}
+                   onClick={() => handleCardScroll(idx)} />
+            ))}
           </div>
         </div>
-        {focusFirstDatabase()}
+        <div className={styles.bookDetail__contentSection}>
+          <div className={styles.bookDetail__noteSection}>
+            <div className={styles.bookDetail__noteHeader}>한줄평 / 메모
+              <Image src={'/svgs/memo.svg'} alt={'Memo'} width={16} height={16}
+                     className={styles.bookDetail__noteIcon} />
+            </div>
+            <div className={styles.bookDetail__actions}>
+              <BasicButton content={'글쓰기'} isActive={true} color={'#FFFFFF'} fontWeight={500} />
+              <BasicButton content={'메모하기'} isActive={false} color={'#FFFFFF'} fontWeight={500} />
+            </div>
+          </div>
+          {focusFirstDatabase()}
 
-        <div ref={focusSecond}>
-          <div className={styles.bookDetail__databaseWrapper}>
-            {renderBookMeta('#000000', '#505050')}
+          <div ref={focusSecond}>
+            <div className={styles.bookDetail__databaseWrapper}>
+              {renderBookMeta('#000000', '#505050')}
+            </div>
           </div>
+          {focusAllDatabase()}
         </div>
-        {focusAllDatabase()}
       </div>
-    </div>
+    </>
   )
 }

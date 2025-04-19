@@ -1,0 +1,167 @@
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: rgba(17, 17, 17, 0.3);
+  z-index: 999;
+}
+
+.container {
+  width: 1580px;
+  height: 964px;
+
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 33px 60px;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 73px;
+
+  background: #F6F6F8;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #D9D9D9;
+  border-radius: 8px 8px 0 0;
+}
+
+.bookmarkTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: 'Pretendard', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.04vw;
+  line-height: 1.25vw;
+
+  color: #262932;
+}
+
+.sizeSelectorWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+
+  width: 161px;
+  height: 44px;
+
+  border: 1px solid #262932;
+  border-radius: 4px;
+}
+
+.sizeSelectorText {
+  font-family: 'Pretendard', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.51vw;
+  text-align: center;
+
+  color: #262932;
+}
+
+.sizeSelector {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  top: 66px;
+  left: auto;
+  right: 0;
+
+  box-sizing: border-box;
+
+  width: auto;
+  height: auto;
+  gap: 10px;
+
+  background: #FAFAFB;
+  border: 1px solid #959FAC;
+  border-radius: 8px;
+
+  z-index: 2;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    width: max-content;
+    height: 50px;
+
+    border-radius: 6px;
+  }
+
+  button:hover {
+    background: #EF5C7C;
+    color: #FFFFFF
+  }
+
+  h1 {
+    font-size: 2vw;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.5vw;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.25vw;
+    font-weight: 600;
+  }
+
+  /* Paragraph */
+  p {
+    font-size: 1vw;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  gap: 25px;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.divider {
+  width: 0;
+  height: 22px;
+
+  border: 1px solid #959FAC;
+  border-radius: 0.1px;
+}
+
+.content {
+  padding: 58px 64px;
+}

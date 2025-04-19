@@ -1,0 +1,241 @@
+@import 'tailwindcss';
+
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  width: 100%;
+}
+
+/* Reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Tiptap Style  */
+.ProseMirror-focused {
+  border: none !important;
+  outline: none !important;
+}
+
+.ProseMirror {
+  min-height: 300px;
+  padding: 15px 0 1.25rem;
+}
+
+.tiptap .is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+  font-size: 0.875rem;
+}
+
+.tiptap {
+  h1 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.25vw;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Paragraph */
+  p {
+    font-size: 1vw;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  /* Bold, Italic, Strike */
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  s {
+    text-decoration: line-through;
+  }
+
+  /* Highlight */
+  mark {
+    background-color: #fff59d;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* Text alignment */
+  p,
+  h1,
+  h2,
+  h3 {
+    text-align: left;
+  }
+
+  .text-align-left {
+    text-align: left;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+
+  .text-align-justify {
+    text-align: justify;
+  }
+
+  p {
+    padding: 0.375rem 0;
+  }
+
+  pre {
+    background: #0d0d0d;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.75rem 1rem;
+    line-height: 1.6rem;
+
+    code {
+      background: none;
+      color: inherit;
+      font-size: 1rem;
+      padding: 0;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 2rem;
+
+    p {
+      padding: 0;
+    }
+  }
+
+  ul > li {
+    list-style: disc;
+
+    li {
+      list-style: circle;
+    }
+  }
+
+  ol > li {
+    list-style: decimal;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--color-border);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.625rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #477bff;
+  }
+
+  iframe {
+    padding: 0.625rem 0;
+  }
+
+  .tableWrapper {
+    margin: 1.25rem 0;
+  }
+
+  table {
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    user-select: contain;
+
+    tr {
+      &:nth-child(2n) {
+        background-color: var(--color-background);
+      }
+
+      &:nth-child(2n + 1) {
+        background-color: var(--color-deep-background);
+      }
+
+      td {
+        padding: 0.9375rem 0.375rem;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+      }
+    }
+  }
+}
