@@ -380,3 +380,96 @@ export function Edit({ width, height }: {
     </svg>
   )
 }
+
+export function Bold({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.21429 8.5C8.09834 8.5 8.94619 8.13125 9.57131 7.47487C10.1964 6.8185 10.5476 5.92826 10.5476 5C10.5476 4.07174 10.1964 3.1815 9.57131 2.52513C8.94619 1.86875 8.09834 1.5 7.21429 1.5H1.5V8.5M7.21429 8.5H1.5M7.21429 8.5H8.16667C9.05072 8.5 9.89857 8.86875 10.5237 9.52513C11.1488 10.1815 11.5 11.0717 11.5 12C11.5 12.9283 11.1488 13.8185 10.5237 14.4749C9.89857 15.1313 9.05072 15.5 8.16667 15.5H1.5V8.5"
+        stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function Italic({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.63601 1L5.36328 14" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M4.27344 1H13.0007" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M1 14H9.72727" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function Strike({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.5 16L11.5 16" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M1.5 1V8.66667C1.5 10.5833 2.78205 12.5 6.62821 12.5" stroke="black" strokeWidth="1.5"
+            strokeLinecap="round" />
+      <path d="M11.5 1V8.66667C11.5 10.5833 10.2179 12.5 6.37179 12.5" stroke="black" strokeWidth="1.5"
+            strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function Highlighter({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.824 7.37548C17.7683 7.3197 17.7021 7.27545 17.6293 7.24525C17.5565 7.21506 17.4784 7.19952 17.3996 7.19952C17.3207 7.19952 17.2426 7.21506 17.1698 7.24525C17.097 7.27545 17.0308 7.3197 16.9751 7.37548L13.1998 11.1516L7.02455 4.9756L6.84831 4.8001L10.6244 1.02478C10.6801 0.969041 10.7243 0.902864 10.7545 0.830032C10.7847 0.757199 10.8002 0.679138 10.8002 0.600305C10.8002 0.521472 10.7847 0.443411 10.7545 0.370578C10.7243 0.297746 10.6801 0.231569 10.6244 0.175825C10.5686 0.120082 10.5025 0.0758637 10.4296 0.0456955C10.3568 0.0155274 10.2787 -1.66128e-09 10.1999 0C10.1211 1.66129e-09 10.043 0.0155274 9.97017 0.0456955C9.89734 0.0758637 9.83116 0.120082 9.77542 0.175825L6.0001 3.95189C5.81856 4.13347 5.70005 4.36848 5.66198 4.6224C5.62392 4.87632 5.6683 5.13575 5.78861 5.36258L4.20019 6.95175C3.97532 7.17676 3.84901 7.48185 3.84901 7.79996C3.84901 8.11807 3.97532 8.42316 4.20019 8.64817L4.55192 8.9999L0.175879 13.3752C0.103502 13.4475 0.0508239 13.5372 0.0228529 13.6356C-0.00511804 13.734 -0.00745292 13.8379 0.0160705 13.9375C0.0395939 14.0371 0.0881938 14.129 0.157251 14.2045C0.226308 14.28 0.313527 14.3366 0.410618 14.3689L5.81036 16.1688C5.87151 16.1893 5.9356 16.1997 6.0001 16.1996C6.07891 16.1996 6.15697 16.1842 6.2298 16.154C6.30263 16.1239 6.36882 16.0798 6.42458 16.0241L8.99996 13.4479L9.35169 13.7997C9.5767 14.0245 9.88179 14.1509 10.1999 14.1509C10.518 14.1509 10.8231 14.0245 11.0481 13.7997L12.6365 12.2113C12.8634 12.3317 13.123 12.3762 13.3771 12.3382C13.6312 12.3001 13.8663 12.1815 14.048 11.9998L17.824 8.22444C17.8798 8.16872 17.9241 8.10255 17.9543 8.02971C17.9845 7.95688 18 7.87881 18 7.79996C18 7.72112 17.9845 7.64304 17.9543 7.57021C17.9241 7.49737 17.8798 7.4312 17.824 7.37548ZM5.83811 14.9134L1.71331 13.5372L5.40013 9.84811L8.15175 12.5997L5.83811 14.9134ZM10.1999 12.9515L9.42444 12.1753L5.82461 8.57542L5.0484 7.79996L6.60007 6.24829L11.7516 11.3998L10.1999 12.9515Z"
+        fill="black" />
+    </svg>
+  )
+}
+
+export function AlignLeft({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+         fill="#000000">
+      <path
+        d="M120-120v-80h720v80H120Zm0-160v-80h480v80H120Zm0-160v-80h720v80H120Zm0-160v-80h480v80H120Zm0-160v-80h720v80H120Z" />
+    </svg>
+  )
+}
+
+export function AlignCenter({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+         fill="#000000">
+      <path
+        d="M120-120v-80h720v80H120Zm160-160v-80h400v80H280ZM120-440v-80h720v80H120Zm160-160v-80h400v80H280ZM120-760v-80h720v80H120Z" />
+    </svg>
+  )
+}
+
+export function AlignRight({ width, height }: {
+  width: number,
+  height: number,
+}) {
+  return (
+    <svg width={`${width}vw`} height={`${height}vw`} xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+         fill="#000000">
+      <path
+        d="M120-760v-80h720v80H120Zm240 160v-80h480v80H360ZM120-440v-80h720v80H120Zm240 160v-80h480v80H360ZM120-120v-80h720v80H120Z" />
+    </svg>
+  )
+}
