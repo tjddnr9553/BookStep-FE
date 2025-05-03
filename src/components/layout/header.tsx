@@ -17,7 +17,7 @@ export default function Header({ isDetailed = false }: { isDetailed?: boolean })
       <div className={styles.header__iconContainer}>
         <IconButton href="/" Icon={Search} color={isDetailed ? '#FFFFFF' : '#262932'} />
         <IconButton href="/" Icon={Notification} color={isDetailed ? '#FFFFFF' : '#262932'} />
-        <hr className={styles.header__divider} />
+        <hr className={styles.header__divider} style={{ borderColor: isDetailed ? '#FFFFFF' : '#262932' }} />
         <IconButton href="/" Icon={Avatar} color={isDetailed ? '#FFFFFF' : '#262932'} />
         <div className={styles.header__userName}>Sarah</div>
         <div className={styles.header__dropdown}>

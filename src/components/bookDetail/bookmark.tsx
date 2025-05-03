@@ -2,7 +2,11 @@ import styles from '@/components/bookDetail/bookmark.module.css'
 import BookmarkItem from '@/components/bookDetail/bookmarkItem'
 import { Plus, Right } from '@/components/icons/customIcons'
 
-export default function Bookmark({ category, index }: { category: string, index: number }) {
+export default function Bookmark({ category, index, itemsLength }: {
+  category: string,
+  index: number,
+  itemsLength?: number
+}) {
   const colors = ['#FF295F', '#F6A329', '#3DAA34', '#357BEC']
 
   return (
@@ -21,8 +25,10 @@ export default function Bookmark({ category, index }: { category: string, index:
         </div>
         <div className={styles.divider}></div>
         <div className={styles.bookmarkItemWrapper}>
-          <BookmarkItem />
-          <BookmarkItem />
+          {/* 북마크 임시 개수 지정 */}
+          {Array.from({ length: itemsLength ? itemsLength : 4 }).map((_, index) => (
+            <BookmarkItem key={index} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,9 @@
 .basicButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75vw;
+
     width: auto;
     min-width: 128px;
     height: 56px;

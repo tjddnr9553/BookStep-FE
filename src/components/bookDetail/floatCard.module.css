@@ -5,7 +5,7 @@
     width: 410px;
     height: 265px;
 
-    background: #262932;
+    background: linear-gradient(360deg, #262932 0%, #464D60 100%);
     border-radius: 28px;
 
     padding: 33px 38px;

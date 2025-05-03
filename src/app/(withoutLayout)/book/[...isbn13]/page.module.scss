@@ -1,5 +1,4 @@
 .bookDetail {
-    position: relative;
     width: 100%;
     height: 100%;
     min-width: 100vw;
@@ -7,7 +6,8 @@
     display: flex;
     flex-direction: column;
     background-color: #F6F6F8;
-    overflow: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 
     &__coverSection {
         position: relative;
@@ -48,7 +48,8 @@
         left: 201px;
         width: 300px;
         height: 444px;
-        background-size: cover;
+        background-size: 100% 100%;
+        background-position: center;
         box-shadow: 3px 3px 17.6px rgba(0, 0, 0, 0.31);
         border-radius: 18px;
         z-index: 2;
@@ -127,6 +128,7 @@
         z-index: 1;
         position: relative;
         padding-top: 30px;
+        height: auto
     }
 
     &__content {
@@ -138,18 +140,62 @@
         padding: 74px 64px 0 200px;
     }
 
-    &__title {
+    &__titleWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
         font-family: 'Pretendard', serif;
+        margin-bottom: 16px;
+
+        color: #FFFFFF;
+    }
+
+    &__title {
         font-weight: 700;
         font-size: 1.88vw;
         line-height: 2.24vw;
-        margin-bottom: 16px;
-        color: #FFFFFF;
+    }
+
+    &__own {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        width: auto;
+        height: 25px;
+        padding: 9px 6px;
+
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.625vw;
+        line-height: 0.73vw;
+        text-align: center;
+
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.28);
+        }
+
+        &__active {
+            color: #FFFFFF;
+        }
+
+        &__unactive {
+            border: 1px solid #D9D9D9;
+            color: #D9D9D9;
+        }
     }
 
     &__infoText {
         display: flex;
-        gap: 10px;
+        gap: 5px;
         margin-bottom: 58px;
         font-family: 'Pretendard', serif;
         font-weight: 400;
@@ -186,5 +232,16 @@
         border-radius: 25px;
         font-size: 0.83vw;
         cursor: pointer;
+    }
+
+    &__databaseWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: auto;
+        height: 76px;
+        padding: 162px 0 0 200px;
+        margin: 0;
     }
 }

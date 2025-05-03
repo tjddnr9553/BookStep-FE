@@ -12,7 +12,7 @@ import { ProgressBar } from '@/components/common/progressBar'
 
 export default function BookItem({ book }: { book: BookData }) {
   const router = useRouter()
-  const { isbn13, title, rating, cover, author, progress } = book
+  const { isbn13, title, rating, cover, author, progress, isOwn } = book
 
   return (
     <div className={styles.bookItem} onClick={() => router.push(`/book/${isbn13}`)}>
@@ -23,14 +23,16 @@ export default function BookItem({ book }: { book: BookData }) {
       <div className={styles.bookItem__infoContainer}>
         <div className={styles.bookItem__info}>
           <div className={styles.bookItem__info__header}>
-            <div className={styles.bookItem__info__title}>{title}</div>
             <div className={styles.bookItem__info__author}>{author}</div>
+            <div className={styles.bookItem__info__titleWrapper}>
+              <div className={styles.bookItem__info__title}>{title}</div>
+              {isOwn && <div className={styles.bookItem__info__own}>보유중</div>}
+            </div>
           </div>
           <div className={styles.bookItem__info__body}>
+            <ProgressBar propProgress={progress} />
             <div className={styles.bookItem__info__progress}>{progress}%</div>
-            <div className={styles.bookItem__info__page}>105<span>/276</span></div>
           </div>
-          <ProgressBar propProgress={progress} />
         </div>
       </div>
     </div>

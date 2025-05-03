@@ -12,6 +12,7 @@ export const Books: BookData[] = [
     pubDate: '2017-03-31',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1913568',
     rating: 1,
+    isOwn: true,
   },
   {
     isbn13: '9788983928099',
@@ -24,6 +25,7 @@ export const Books: BookData[] = [
     pubDate: '2000-10-20',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2391199',
     rating: 2,
+    isOwn: false,
   },
   {
     isbn13: '9788954672894',
@@ -36,6 +38,7 @@ export const Books: BookData[] = [
     pubDate: '2001-12-01',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2688152',
     rating: 3,
+    isOwn: true,
   },
   {
     isbn13: '9788972756194',
@@ -48,6 +51,7 @@ export const Books: BookData[] = [
     pubDate: '2004-05-20',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1993419',
     rating: 1,
+    isOwn: true,
   },
   {
     isbn13: '9788990982515',
@@ -60,6 +64,7 @@ export const Books: BookData[] = [
     pubDate: '2003-08-15',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2387295',
     rating: 2,
+    isOwn: false,
   },
   {
     isbn13: '9788937460241',
@@ -72,6 +77,7 @@ export const Books: BookData[] = [
     pubDate: '2005-09-30',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2399829',
     rating: 1,
+    isOwn: false,
   },
   {
     isbn13: '9788932916705',
@@ -84,6 +90,7 @@ export const Books: BookData[] = [
     pubDate: '2001-11-15',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2340976',
     rating: 1,
+    isOwn: true,
   },
   {
     isbn13: '9788937833663',
@@ -96,6 +103,7 @@ export const Books: BookData[] = [
     pubDate: '2012-12-19',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2122172',
     rating: 3,
+    isOwn: false,
   },
   {
     isbn13: '9788960176230',
@@ -108,6 +116,7 @@ export const Books: BookData[] = [
     pubDate: '2006-04-05',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2466441',
     rating: 1,
+    isOwn: true,
   },
   {
     isbn13: '9788901219943',
@@ -120,5 +129,6 @@ export const Books: BookData[] = [
     pubDate: '2009-07-10',
     itemPage: 'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2442136',
     rating: 2,
+    isOwn: false,
   },
 ]
